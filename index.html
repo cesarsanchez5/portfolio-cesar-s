@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Signika:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/eins-modal/dist/css/eins-modal.min.css">
+    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+
+
+</head>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/pdfmake.min.js" ></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.62/vfs_fonts.js" ></script>
+
+<body>
+
+<header>
+<div class="navbar container" >
+        <nav>
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#briefcase">Proyectos</a></li>
+                <li><a href="#about-me">Sobre mi</a></li>                
+                
+            </ul>
+        </nav>
+    </div>
+
+</header>
+
+
+<section>
+ <div class="hero" id="inicio">
+     <div class="container">  
+    <img src="./img/fondo-desktop.jpg" alt="">
+ </div>
+</div>
+ <div class="profile">
+    <div class="square"></div>
+    <div class="circle-trans"></div>
+    <div class="circle"></div>
+    <div class="profile-img"><img src="./img/perfil.jpg" alt=""></div>
+    <div class="square-text">Cesar Sanchez Treviño</div>
+    <div class="square-text-2"><span>ING. ELECTRICISTA | WEB DEVELOPER</span></div>
+    <div class="contact-icon">
+        
+        <a data-modal-id="message"><img src="./img/message.svg" alt=""></a>
+        
+        <a href="https://github.com/cesarsanchez5/vetrinaria_mi_mascota_citas.git" target="_blank"><img src="./img/github.svg" alt=""></a>
+ 
+        <button class="boton"  onclick="imprimirPdf()" >Descargar CV <i style="font-size: 16px;" class="fa-solid fa-circle-down"></i>   </button>
+                
+   
+    </div>
+    
+ </div>
+</section>
+<div id="briefcase"></div>
+
+<section class="briefcase">
+    <div class="briefcase-section container">
+        <h2><span>Proyectos realizados</span></h2>
+        <div class="briefcase-grid">
+
+            <div><a data-modal-id="pw-portafolio"><img src="./img/p-veterinaria.jpg" alt=""></a></div>
+
+            <div><a data-modal-id="pw-ropbodactav2"><img src="./img/p-buscador.jpg" alt=""></a></div>
+            
+            <div><a data-modal-id="pw-dacorp"><img src="./img/p-clima.jpg" alt=""></a></div>
+           
+            
+        </div>
+    </div>
+</section>
+
+<section class="skills" >
+    <div class="skill container"> 
+        <div class="knowledge-part">
+            <h2><span   >Lenguajes de programacion</span> </h2>
+          
+            <div class="knowledge"  >
+
+                <div>
+                    <img src="./img/html-icon.png" alt="">
+                    <h3>HTML</h3>
+                </div>
+                <div>
+                    
+                    <img src="./img/jjvsc.png" alt="">
+                    <h3>Javascript</h3>
+                </div>
+                <div>
+                    <img src="./img/css-icon.png" alt="">
+                    <h3>CSS</h3> 
+                </div>
+               
+               
+            </div>
+
+        </div>
+
+
+        <div class="tools-part" >
+            <h2><span> Herramientas</span></h2>
+            <div class="tools"  >
+          
+                <div> 
+                    <img src="./img/atom.png" alt="">
+                   
+                     <h3>React</h3>
+                 </div>
+                
+
+
+           
+               <div> 
+                   <img src="./img/nod2.jpg" alt="">
+                    <h3>Node JS</h3>
+                </div>
+                
+                 
+            </div>
+        </div>
+    </div>
+
+</section>
+
+<section class="about" id="about-me">
+    <div class="about-flex container">
+        <div class="about-info">
+            <p>Hola, mi nombre es Julio Cesar Sanchez Treviño, Soy Ingeniero Mecanico Electricista, en estos ultimos años me he enfocado en el desarrollo web inclinandome al area de frotEnd pero sin hacer a un lado el backEnd. Mi pasatiempo favorito es leer.</p>
+            
+        </div>
+        <div class="social">
+
+          
+           
+            <a href="https://github.com/cesarsanchez5/placeholder_buscador.git" target="_blank"><img src="./img/github.svg" alt=""></a>
+ 
+
+            <a data-modal-id="message"><img src="./img/message.svg" alt=""></a>
+        </div>
+    </div>
+     
+</section>
+
+<footer>
+    <p> 2022 Elaborado por Cesar Sanchez</p>
+    <br>
+</footer>
+
+ 
+
+<div id="pw-portafolio" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="eins-modal-close"></div>
+            <div class="pw-content">
+                <div class="eins-modal-preview">
+                    <img src="./img/p-veterinaria.jpg" alt="">
+                </div>
+
+
+                <div class="eins-modal-text">
+                    <h3>Clinica veterinaria</h3>
+                    <p>Control de citas de mascotas, crea, edita y elimina citas, Control de citas de mascotas, crea, edita y elimina citas, elaborado con Javascript, React, nodeJS, css, HTML, utilizando el orden recomendado por React elaborando componentes con funciones usando sintaxis JSX, usando los hooks comunes: useState, useEffect.
+                    </p>
+                   
+                    <div class="eins-modal-text-2">
+                        <span>Codigo:</span><a target="_blank" href="https://practical-williams-99944f.netlify.app/">https://github.com/cesarsanchez5</a>
+                    </div>
+                    <div class="eins-modal-text-3">
+                        <span>Lenguajes y Frameworks que se utilizaron:</span>
+                        <div class="eins-modal-tec">
+                            <img src="./img/html-icon.png" alt="">
+                            <img src="./img/css-icon.png" alt="">
+                            <img src="./img/jjvsc.png" alt="">
+                            <img src="./img/atom.png" alt="">
+                            
+                        
+                        
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div id="pw-ropbodactav2" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="eins-modal-close"></div>
+            <div class="pw-content">
+                <div class="eins-modal-preview">
+                    <img src="./img/p-buscador.jpg" alt="">
+                </div>
+                
+                
+                <div class="eins-modal-text">
+                    <h3>Busqueda de empleados</h3>
+                    <p>Consumo de API jsonplaceholder, filtrado de empleados buscados por nombre o correo, mostrando el valor de la busqueda. Elaborado con Javascript, React, nodeJS, css, bootstrap, HTML, utilizando el orden recomendado por React elaborando componentes con funciones usando sintaxis JSX, usando los hooks comunes: useState, useEffect. axios para consumo de recursos.   </p>
+                   
+                    <div class="eins-modal-text-2">
+                        <span>Codigo:</span><a target="_blank" href="https://silly-kowalevski-36aac5.netlify.app/">https://github.com/cesarsanchez5</a>
+                    </div>
+                    <div class="eins-modal-text-3">
+                        <span>Lenguajes y Frameworks que se utilizaron:</span>
+                        <div class="eins-modal-tec">
+                            <img src="./img/html-icon.png" alt="">
+                            <img src="./img/css-icon.png" alt="">
+                            <img src="./img/jjvsc.png" alt="">
+                            <img src="./img/atom.png" alt="">                          
+                         
+                        </div>
+
+                    </div>
+                </div>
+
+             
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pw-dacorp" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="eins-modal-close"></div>
+            <div class="pw-content">
+                <div class="eins-modal-preview">
+                    <img src="./img/p-clima.jpg" alt="">
+                </div>
+                        
+                <div class="eins-modal-text">
+                    <h3>Consulta de clima</h3>
+                    <p> Consumo de API openweathermap.org, insertando ciudad y pais, muestra el clima solicitado. Elaborado con Javascript, React, nodeJS, css, HTML, utilizando el orden recomendado por React elaborando componentes con funciones usando sintaxis JSX, usando los hooks comunes: useState, useEffect. fetch para consumo de recursos.       </p>
+                   
+                    <div class="eins-modal-text-2">
+                        <span>Codigo:</span><a target="_blank" href="https://naughty-kilby-bb3912.netlify.app/">https://github.com/cesarsanchez5</a>
+                    </div>
+                    <div class="eins-modal-text-3">
+                        <span>Lenguajes y Frameworks que se utilizaron:</span>
+                        <div class="eins-modal-tec">
+                            <img src="./img/html-icon.png" alt="">
+                            <img src="./img/css-icon.png" alt="">
+                            <img src="./img/jjvsc.png" alt="">
+                            <img src="./img/atom.png" alt="">
+                             
+                        </div>
+
+                    </div>
+                </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="pw-ionic" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="pw-content">
+            <div class="eins-modal-close"></div>    
+            <div class="eins-modal-preview"><img src="/img/2pagina-web-ionic.png" alt="">
+            </div>
+            <div class="eins-modal-text">
+                <p> Página corporativa de Ionic Pro- Página de lanzamiento de producto Ionic Uv Purifier.  </p>
+                <p> Un purificador por UV (luz ultravioleta) que se coloca en los aires acondicionados y elimina virus y bacterias presentes en el ambiente</p>
+                <div class="eins-modal-text-2">
+                    <span>Enlace:</span> <a href="https://ionicpro.net"target="_blank">https://ionicpro.net</a>
+                </div>
+                <div class="eins-modal-text-3">
+                    <span>Tecnologías Utilizadas:</span> 
+                    <div class="eins-modal-tec">
+                        <img src="/img/html-icon.png" alt="">
+                        <img src="/img/css-icon.png" alt="">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="pw-repar" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="pw-content">
+            <div class="eins-modal-close"></div>    
+            <div class="eins-modal-preview"><img src="/img/2pagina-web-repar.png" alt="">
+            </div>
+            <div class="eins-modal-text">
+                <p>Repar Ind. Sa, Página coorporativa para empresa panameña enfocada en reparaciónes y sistemas industriales.  </p>
+                <p> Tienen dos ramas importantes. Instalación de Energía Solar e Instalación, mantenimiento y reparación de  Tecles y montacargas.</p>
+                <div class="eins-modal-text-2">
+                    <span>Enlace:</span> <a href="https://reparind.com"target="_blank">https://reparind.com</a>
+                </div>
+                <div class="eins-modal-text-3">
+                    <span>Tecnologías Utilizadas:</span> 
+                    <div class="eins-modal-tec">
+                        <img src="/img/wordpress-icon.png" alt="">
+                        <img src="/img/css-icon.png" alt="">
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div id="pw-neuroPamama" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="pw-content"> 
+            <div class="eins-modal-close"></div>   
+            <div class="eins-modal-preview"><img src="/img/2pagina-web-neuroPanama.png" alt="">
+            </div>
+            <div class="eins-modal-text">
+                <p>NeuroPanama, página coorporativa de la empresa en colaboración con otro diseñador web.   </p>
+                <p>Clínica enfocada a la neuropsicología. Tratamientos, asesorias y orientación para mejorar el funcionamiento cognitivo de la persona. </p>
+                <div class="eins-modal-text-2">
+                    <span>Enlace:</span> <a href="https://clinicaneuropanama.com/"target="_blank">https://clinicaneuropanama.com</a>
+                </div>
+                <div class="eins-modal-text-3">
+                    <span>Tecnologías Utilizadas:</span> 
+                    <div class="eins-modal-tec">
+                        <img src="/img/wordpress-icon.png" alt="">
+                        <img src="/img/css-icon.png" alt="">
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+<div id="message" class="eins-modal" data-options="openTransition: expandIn; openDuration: 200;">
+    <div class="eins-modal-content">
+        <div class="eins-modal-close"></div>
+        <form  class="form" action="https://formspree.io/f/xpznzlrg" method="POST">
+            <label>Tu Correo Electrónico:
+            <input type="email" name="_replyto">
+            </label>
+
+            <label>Escribe un mensaje y te contestare a la brevedad:
+            <textarea name="message"></textarea>
+            </label>
+            <button class="btnenviar"  type="submit">Enviar</button>
+        </form>
+    </div>
+</div>
+
+
+<script src="generarCV.js"> </script>
+
+
+ <script src="node_modules/eins-modal/dist/js/eins-modal.min.js"></script> 
+
+</body>
+
+</html>
