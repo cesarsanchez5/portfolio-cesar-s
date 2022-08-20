@@ -143,7 +143,7 @@ section.skills {
 }
 
 .skill h2 {
-    padding: 30px 30px 90px 30px;
+    padding: 30px 30px 80px 30px;
     font-size: 2.2rem;
 }
 
@@ -519,5 +519,160 @@ label {
 }
 
 
+/* comienza modal */
 
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+     
+}
+ 
+
+ 
+
+.cta{
+    margin: auto;
+    background-color: royalblue;
+    color: beige;
+    text-decoration: none;
+    padding: 1.2em 3em;
+    border-radius: .4em;
+
+}
+
+.modal{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    z-index: 25;
+
+    background-color: rgba( 0,0,0,0.7 );
+    
+    display: flex;
+
+    --opacity: 0;
+    --pointer: none;
+
+    opacity: var(--opacity);
+    pointer-events: var(--pointer);
+    transition: opacity .5s;
+
+}
+
+
+  
+.modal:target{
+    --opacity: 1;
+    --pointer: unset;
+}
+
+
+
+.modal__container{
+    margin: auto;
+
+    background-color: var(--dark1);
+    /* background-color: darkgrey; */
+    width: 90%;
+    max-width: 600px;
+    max-height: 90%;
+    overflow: hidden;
+    text-align: center;
+    padding: 1.2em 1.2em;
+    border-radius: 1em;
+
+}
+
+.modal:target .modal__container{
+    animation: show 1s .5 backwards;
+}
+
+@keyframes show {
+    0%{
+        transform: translateY(-150vh);
+    }
+
+    100%{
+        transform: translateY(0 );
+    }
+}
+
+
+
+.modal__picture{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 400px;
+    margin-bottom: 2em;
+
+}
+
+.modal:target .modal__picture{
+    animation: scale .5s 1.5s backwards;
+}
+
+@keyframes scale {
+    0%{
+        transform: scale(0)
+    }
+}
+
+
+.modal__img{
+    width: 100%;
+     
+    display: block;
+}
+
+.modal__title{
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--primary);
+
+}
+
+.modal__title--bold{
+    font-weight: 700;
+}
+
+.modal__paragraph{
+    margin-top: 1em;
+    margin-bottom: 1em;
+    line-height: 1.5em;
+}
+
+.modal__close{
+
+     /* display: inline-block; */
+     float: right;
+
+    border: 2px solid rgb(75, 66, 66);
+    padding: .3em;  
+    text-decoration: none;
+    font-weight: 800;
+    color: rgb(208, 197, 197);
+    border-radius: .4em;  
+    background-color:rgb(97, 92, 92);   
+}
+
+.modal__close:hover{
+    background-color: rgb(146, 9, 9);
+
+}
+
+@media (max-width:600px){
+    .modal__title{
+        font-size: 1.7rem;
+    }
+
+}
  
